@@ -2,6 +2,7 @@
 
 A simple web app to generate QR codes from URLs.  
 Built with Express.js, EJS, Bootstrap, and the qrcode library.
+See the demo app in <https://qr-generator-m-farras-majids-projects.vercel.app/>.
 
 ---
 
