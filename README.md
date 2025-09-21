@@ -60,7 +60,7 @@ Built with Express.js, EJS, Bootstrap, and the qrcode library.
 
 ---
 
-## ⚙️ Scripts (package.json excerpt)
+## ⚙️ Scripts (package.json)
     "scripts": {
       "start": "node server.js",
       "dev": "node --watch server.js",
@@ -72,6 +72,7 @@ Built with Express.js, EJS, Bootstrap, and the qrcode library.
 ## ☁️ Deploying to Vercel
 
 1) Update server.js (export app on Vercel)
+```
     if (process.env.VERCEL) {
       module.exports = app;
     } else {
@@ -79,12 +80,16 @@ Built with Express.js, EJS, Bootstrap, and the qrcode library.
         console.log(`App running at http://localhost:${PORT}`);
       });
     }
+```
 
 2) Add serverless handler: api/index.js
+```
     const app = require('../server');
     module.exports = app;
+```
 
 3) Create vercel.json
+```
     {
       "functions": {
         "api/index.js": { "runtime": "nodejs20.x" }
@@ -94,6 +99,7 @@ Built with Express.js, EJS, Bootstrap, and the qrcode library.
         { "src": "/(.*)", "dest": "/api/index.js" }
       ]
     }
+```
 
 4) Deploy options
 - From Git:
