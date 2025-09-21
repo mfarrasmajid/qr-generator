@@ -105,12 +105,16 @@ Built with Express.js, EJS, Bootstrap, and the qrcode library.
 - From Git:
   - Push repo to GitHub/GitLab/Bitbucket → import on https://vercel.com → Deploy
 - From CLI:
+```
     npm i -g vercel
     vercel
     vercel --prod
+```
 
 (Optional) Local Vercel emulation:
+```
     vercel dev
+```
 
 ---
 
